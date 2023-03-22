@@ -1,0 +1,145 @@
+@use './colors' as *;
+
+@use './small' as *;
+@use './medium' as *;
+@use './large' as *;
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+html {
+	font-size: 62.5%;
+	scroll-behavior: smooth;
+}
+
+body {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 1.6rem;
+	background-color: $white;
+}
+// NAV
+
+.nav {
+	display: flex;
+	align-items: center;
+	position: fixed;
+	top: 0;
+	left: 0;
+	padding-left: 0.5em;
+	z-index: 100;
+	background-color: #fff;
+	width: 100%;
+	height: 80px;
+
+	&__logo {
+		font-size: 3rem;
+
+		a {
+			color: black;
+			text-decoration: none;
+			padding: 15px;
+		}
+
+		.fa-tree {
+			color: $dark-gray;
+		}
+	}
+
+	.hamburger {
+		position: absolute;
+		right: 1em;
+		z-index: 101;
+
+		&-inner,
+		&-inner::before,
+		&-inner::after {
+			background-color: $black;
+			z-index: 500;
+		}
+	}
+
+	&-mobile {
+		position: absolute;
+		height: 100vh;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		background-color: $white;
+		transform: translateX(102%);
+		transition: transform 0.3s;
+		z-index: 10;
+
+		&--active {
+			transform: translateX(0);
+		}
+	}
+
+	&-desktop {
+		display: none;
+	}
+
+	&__link {
+		position: relative;
+		display: inline-block;
+		margin: 0.5em;
+		padding: 0.5em;
+		font-size: 2.3rem;
+		color: $black;
+		text-decoration: none;
+        transition: color .3s;
+
+        &:hover {
+            background-color: $black;
+            color: $white;
+        }
+	}
+}
+
+// HEADER
+.header {
+	background-image: url(../../dist/img/jungle_1920.jpg);
+	color: $white;
+	position: relative;
+	height: 500px;
+	width: 100%;
+	margin-top: 80px;
+	background-position: center;
+	background-size: cover;
+	z-index: 0;
+
+	&__shadow {
+		position: absolute;
+		background-color: rgba(0, 0, 0, 0.6);
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: -1;
+	}
+
+	&__content {
+		position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+	}
+
+    &__text {
+        font-weight: 300;
+        font-size: 2.5rem;
+    }
+
+    &__heading {
+        font-weight: 700;
+        font-size: 3rem;
+    }
+}
