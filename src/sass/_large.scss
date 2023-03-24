@@ -1,0 +1,14 @@
+@media (min-width: 992px) {
+	.nav {
+		justify-content: space-around;
+        padding-left: 0;
+
+		&-desktop {
+			display: block;
+		}
+
+		.hamburger {
+			display: none;
+		}
+	}
+}
