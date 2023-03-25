@@ -5,8 +5,13 @@
 
 		&-desktop {
 			display: block;
+            font-size: 5px;
 		}
 
+        &__link {
+            padding: 1.9em;
+            font-size: 1.6rem;
+        }
 		.hamburger {
 			display: none;
 		}
