@@ -8,6 +8,10 @@
             font-size: 5px;
 		}
 
+        &-mobile {
+            display: none;
+        }
+
         &__link {
             padding: 1.9em;
             font-size: 1.6rem;
@@ -16,4 +20,10 @@
 			display: none;
 		}
 	}
+
+    .header {
+        &__content {
+            left: 33vw;
+        }
+    }
 }
