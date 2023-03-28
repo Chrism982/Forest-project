@@ -1,29 +1,41 @@
 @media (min-width: 992px) {
 	.nav {
 		justify-content: space-around;
-        padding-left: 0;
+		padding-left: 0;
 
 		&-desktop {
 			display: block;
-            font-size: 5px;
+			font-size: 5px;
 		}
 
-        &-mobile {
-            display: none;
-        }
+		&-mobile {
+			display: none;
+		}
 
-        &__link {
-            padding: 1.9em;
-            font-size: 1.6rem;
-        }
+		&__link {
+			padding: 1.9em;
+			font-size: 1.6rem;
+		}
 		.hamburger {
 			display: none;
 		}
 	}
 
-    .header {
-        &__content {
-            left: 33vw;
-        }
-    }
+	.header {
+		&__content {
+			left: 33vw;
+		}
+	}
+
+	.aboutus {
+		&__box {
+			&-img {
+				margin-right: 2.5em;
+			}
+		}
+
+		&__text {
+			font-size: 1.8rem;
+		}
+	}
 }

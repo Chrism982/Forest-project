@@ -1,0 +1,36 @@
+@media (min-width: 768px) {
+	.section-heading {
+		font-size: 3.6rem;
+	}
+
+	.aboutus {
+		&__box {
+			flex-direction: row;
+			justify-content: space-between;
+
+			&-text {
+				font-size: 2rem;
+				width: 50%;
+				margin-left: 2em;
+			}
+			&-img {
+				width: 50%;
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	.hero {
+        background-image: url(../../dist/img/girl_1920.jpg);
+		&__heading {
+			text-align: center;
+			margin: 1em;
+			padding: 1em 4em;
+			font-size: 4rem;
+            font-weight: normal;
+			color: #fff;
+			border: 1px solid #fff;
+			z-index: 1;
+		}
+	}
+}
