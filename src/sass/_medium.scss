@@ -33,4 +33,17 @@
 			z-index: 1;
 		}
 	}
+
+    .offer {
+        &__cards {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        &__card {
+            margin: 1em;
+            width: 45%;
+        }
+    }
 }
