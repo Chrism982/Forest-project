@@ -308,23 +308,41 @@ body {
 
 // FOOTER
 .footer {
-    display: flex;
+	display: flex;
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
-	padding: 3em;
-	background-color: rgb(230, 230, 230);
-	border-bottom: 1px solid #333;
+	padding: 2em 2em 0em;
+	background-color: $gray;
 
-    &__menu-box{
-        display: flex;   
-		
-    }
-    
-    &__menu {
-        margin: 1.5em 3em;
+	&__menu-box {
+		text-align: center;
+	}
+
+	&__menu {
+		margin: 1.5em 3em;
 		list-style: none;
-}
+
+		&-header {
+			font-size: 2rem;
+			margin-bottom: 0.5em;
+		}
+
+		a {
+			display: block;
+			padding: 0.3em 0;
+			text-decoration: none;
+			color: $black;
+		}
+	}
+
+	&__line {
+		width: 150%;
+	}
+	&__text {
+		text-align: center;
+		padding: 1em 0;
+	}
 }
 
 @import './small';
