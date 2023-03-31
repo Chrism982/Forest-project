@@ -44,4 +44,18 @@
             width: 30%;
         }
     }
+	.footer {
+         	
+	
+	
+        &__menu{
+        padding: 1em 5em;
+		margin-bottom: 2em;
+        }
+
+		.nav__logo {
+			margin-top: -2em;
+			font-size: 3.7rem;
+		}
+    }
 }

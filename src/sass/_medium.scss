@@ -21,29 +21,48 @@
 	}
 
 	.hero {
-        background-image: url(../../dist/img/girl_1920.jpg);
+		background-image: url(../../dist/img/girl_1920.jpg);
 		&__heading {
 			text-align: center;
 			margin: 1em;
 			padding: 1em 4em;
 			font-size: 4rem;
-            font-weight: normal;
+			font-weight: normal;
 			color: #fff;
 			border: 1px solid #fff;
 			z-index: 1;
 		}
 	}
 
-    .offer {
-        &__cards {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
+	.offer {
+		&__cards {
+			display: flex;
+			justify-content: center;
+			flex-wrap: wrap;
+		}
+
+		&__card {
+			margin: 1em;
+			width: 45%;
+		}
+	}
+    .footer {
+        justify-content: space-around;
+		flex-direction: row;
+    	
+	
+	&__menu-box {
+		justify-content: space-around;
+		flex-direction: row;
+        }
+        &__menu{
+        padding: 1em 2em;
         }
 
-        &__card {
-            margin: 1em;
-            width: 45%;
-        }
+		.nav__logo {
+			margin-top: -2em;
+			font-size: 3.7rem;
+		}
     }
+	
 }
