@@ -52,17 +52,14 @@
     	
 	
 	&__menu-box {
-		justify-content: space-around;
+		justify-content: space-evenly;
 		flex-direction: row;
         }
         &__menu{
         padding: 1em 2em;
         }
 
-		.nav__logo {
-			margin-top: -2em;
-			font-size: 3.7rem;
-		}
     }
+	
 	
 }
