@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pl">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta
+			name="description"
+			content="Najpięknieszy park położony w wojewódźtwie lubuskim. Miejsce do spokojnego wypoczynku i relaksu na świeżym powietrzu." />
+		<title>Forest Group</title>
+		<!-- @include 'styles.kit' -->
+	</head>
+	<body>
+		<!-- @include 'nav.kit' -->
+
+		<section class="contact section-padding" id="contact">
+            <div class="wrapper">
+            <h2 class="section-heading">kontakt</h2>
+                <form action="mail.php" method="post" class="contact-form">
+
+                    <div class="contact-box">
+                      <label for="name">Imię:</label>
+                      <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="contact-box">
+                      <label for="email">Email:</label>
+                      <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="contact-box">
+                      <label for="msg">Wiadomość:</label>
+                      <textarea name="msg" id="msg" required></textarea>
+                    </div>
+                
+                    <button>Wyślij</button>
+                
+                  </form>
+                
+                  <p class="msg-status"></p>
+                  </div>
+            </section>
+        </main>
+
+		<!-- @include 'footer.kit' -->
+
+		<script src="/dist/js/main.min.js"></script>
+	</body>
+</html>
