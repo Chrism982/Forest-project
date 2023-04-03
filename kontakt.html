@@ -29,46 +29,52 @@
 	</button>
 
 	<div class="nav-mobile">
-		<a class="nav__link" href="#home">Home</a>
-		<a class="nav__link" href="#aboutus">O nas</a>
-		<a class="nav__link" href="#offer">Oferta</a>
+		<a class="nav__link" href="index.html#home">Home</a>
+		<a class="nav__link" href="index.html#aboutus">O nas</a>
+		<a class="nav__link" href="index.html#offer">Oferta</a>
 		<a class="nav__link" href="kontakt.html">Kontakt</a>
 	</div>
 	<div class="nav-desktop">
-		<a class="nav__link" href="#home">Home</a>
-		<a class="nav__link" href="#aboutus">O nas</a>
-		<a class="nav__link" href="#offer">Oferta</a>
+		<a class="nav__link" href="index.html#home">Home</a>
+		<a class="nav__link" href="index.html#aboutus">O nas</a>
+		<a class="nav__link" href="index.html#offer">Oferta</a>
 		<a class="nav__link" href="kontakt.html">Kontakt</a>
 	</div>
 </nav>
 
+		<main>
+			<section class="contact section-padding" id="contact">
+				<div class="wrapper">
+					<h2 class="section-heading">kontakt</h2>
+					<form action="mail.php" method="post" class="contact-form">
+						<div class="contact-box">
+							<label for="name">Imię:</label>
+							<input type="text" id="name" name="name" required />
+						</div>
+						<div class="contact-box">
+							<label for="email">Email:</label>
+							<input type="email" id="email" name="email" required />
+						</div>
+						<div class="contact-box">
+							<label for="msg">Wiadomość:</label>
+							<textarea name="msg" id="msg" required></textarea>
+						</div>
 
-		<section class="contact section-padding" id="contact">
-            <div class="wrapper">
-            <h2 class="section-heading">kontakt</h2>
-                <form action="mail.php" method="post" class="contact-form">
-
-                    <div class="contact-box">
-                      <label for="name">Imię:</label>
-                      <input type="text" id="name" name="name" required>
-                    </div>
-                    <div class="contact-box">
-                      <label for="email">Email:</label>
-                      <input type="email" id="email" name="email" required>
-                    </div>
-                    <div class="contact-box">
-                      <label for="msg">Wiadomość:</label>
-                      <textarea name="msg" id="msg" required></textarea>
-                    </div>
-                    
-                    <button>Wyślij</button>
-                
-                </form>
-                <p class="msg-status ">Testowy Komunikat</p>
-                
-                  </div>
+						<button>Wyślij</button>
+					</form>
+					<p class="msg-status"></p>
+				</div>
+			</section>
+            <section class="map">
+                <h2 class="section-heading">Mapa</h2>
+                <div class="wrapper">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4305.194003540405!2d19.891369089971832!3d50.0884648344132!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47165a326d015c3b%3A0x47a12cd367a1f34e!2sRestauracja%20McDonald&#39;s!5e0!3m2!1spl!2spl!4v1678449261289!5m2!1spl!2spl"
+                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
             </section>
-        </main>
+		</main>
 
 		<footer class="footer">
 	<div class="nav__logo">

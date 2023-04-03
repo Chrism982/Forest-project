@@ -46,19 +46,21 @@
 			width: 45%;
 		}
 	}
-    .footer {
-        justify-content: space-evenly;
+	.footer {
+		justify-content: space-evenly;
 		flex-direction: row;
-    	
-	
-	&__menu-box {
-		flex-direction: row;
-        }
-        &__menu{
-        padding: 1em 2em;
-        }
 
-    }
-	
-	
+		&__menu-box {
+			flex-direction: row;
+		}
+		&__menu {
+			padding: 1em 2em;
+		}
+	}
+
+	.contact {
+		button {
+			width: 20%;
+		}
+	}
 }
