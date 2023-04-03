@@ -47,12 +47,11 @@
 		}
 	}
     .footer {
-        justify-content: space-around;
+        justify-content: space-evenly;
 		flex-direction: row;
     	
 	
 	&__menu-box {
-		justify-content: space-evenly;
 		flex-direction: row;
         }
         &__menu{
