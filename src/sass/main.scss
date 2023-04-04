@@ -404,15 +404,17 @@ body {
 	.error {
 		display: flex;
 		background-color: $error;
-	}
-
+	}	
+}
+.map {
+	padding: 5em 2em;
 	iframe {
-		display: flex;
-		margin: 0 auto;
-		margin-top: 5em;
 		width: 100%;
-		// max-width: 900px;
-		min-height: 300px;
+	}
+	.wrapper {
+		display: flex;
+		justify-content: center;
+		align-items: center;
 	}
 }
 
