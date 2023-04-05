@@ -255,6 +255,9 @@ body {
 			font-size: 4rem;
 			margin-bottom: 1em;
 		}
+		&-text {
+			padding-bottom: 2em;
+		}
 		&-options {
 			list-style: none;
 
@@ -404,7 +407,7 @@ body {
 	.error {
 		display: flex;
 		background-color: $error;
-	}	
+	}
 }
 .map {
 	padding: 5em 2em;
