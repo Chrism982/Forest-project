@@ -188,6 +188,10 @@ body {
 		font-size: 1.4rem;
 		font-weight: 300;
 		line-height: 1.7;
+
+		&-offer{
+			padding: 0.5em;
+		}
 	}
 }
 
@@ -420,6 +424,8 @@ body {
 		align-items: center;
 	}
 }
+
+
 
 @import './small';
 @import './medium';
