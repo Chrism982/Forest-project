@@ -92,6 +92,7 @@ body {
 		display: none;
 		justify-content: center;
 		align-items: center;
+		
 	}
 
 	&__link {
@@ -106,6 +107,10 @@ body {
 		&:hover {
 			background-color: $black;
 			color: $white;
+		}
+		&--active {
+			background-color: #000;
+			color: #fff;
 		}
 	}
 }

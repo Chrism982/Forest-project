@@ -1,7 +1,9 @@
 const navMobile = document.querySelector('.nav-mobile');
 const navBtn = document.querySelector('.hamburger');
 const footerYear = document.querySelector('.footer__year');
-const scrollSpySections = document.querySelectorAll('.section')
+const navLinks = document.querySelectorAll('.nav__link');
+const sections = document.querySelectorAll('section');
+const navHeight = document.querySelector('.nav').offsetHeight;
 
 const msgStatus = document.querySelector('.msg-status');
 
@@ -36,3 +38,25 @@ if (document.location.search === '?mail_status=error') {
 		msgStatus.classList.remove('error');
 	}, 3000);
 }
+
+const handleScrollSpy = () => {
+	let currentSectionIndex = 0;
+
+	for (let i = 0; i < sections.length; i++) {
+		const sectionTop = sections[i].offsetTop - navHeight;
+		const sectionHeight = sections[i].offsetHeight;
+		const scrollPos = window.scrollY;
+
+		if (scrollPos >= sectionTop - sectionHeight / 3) {
+			currentSectionIndex = i;
+		}
+	}
+
+	navLinks.forEach((link) => {
+		link.classList.remove('nav__link--active');
+	});
+
+	navLinks[currentSectionIndex].classList.add('nav__link--active');
+};
+
+window.addEventListener('scroll', handleScrollSpy);
