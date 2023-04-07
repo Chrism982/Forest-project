@@ -10,9 +10,16 @@ const msgStatus = document.querySelector('.msg-status');
 const handleNav = () => {
 	navBtn.classList.toggle('is-active');
 	navMobile.classList.toggle('nav-mobile--active');
+
+	if (navMobile.classList.contains('nav-mobile--active')) {
+		document.body.style.overflowY = 'hidden';
+	} else {
+		document.body.style.overflowY = 'auto';
+	}
 };
 
 navBtn.addEventListener('click', handleNav);
+navLinks.forEach((li) => li.addEventListener('click', handleNav));
 
 const handleCurrentYear = () => {
 	const year = new Date().getFullYear();
