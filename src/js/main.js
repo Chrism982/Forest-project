@@ -1,25 +1,26 @@
 const navMobile = document.querySelector('.nav-mobile');
 const navBtn = document.querySelector('.hamburger');
 const footerYear = document.querySelector('.footer__year');
-const navLinks = document.querySelectorAll('.nav__link');
-const sections = document.querySelectorAll('section');
-const navHeight = document.querySelector('.nav').offsetHeight;
+const menuItems = document.querySelectorAll('.nav__link');
+const scrollSpySections = document.querySelectorAll('.section1');
+
 
 const msgStatus = document.querySelector('.msg-status');
 
-const handleNav = () => {
-	navBtn.classList.toggle('is-active');
-	navMobile.classList.toggle('nav-mobile--active');
 
-	if (navMobile.classList.contains('nav-mobile--active')) {
-		document.body.style.overflowY = 'hidden';
-	} else {
-		document.body.style.overflowY = 'auto';
-	}
-};
+// const handleNav = () => {
+// 	navBtn.classList.toggle('is-active');
+// 	navMobile.classList.toggle('nav-mobile--active');
+
+// 	if (navMobile.classList.contains('nav-mobile--active')) {
+// 		document.body.style.overflowY = 'hidden';
+// 	} else {
+// 		document.body.style.overflowY = 'auto';
+// 	}
+// };
 
 navBtn.addEventListener('click', handleNav);
-navLinks.forEach((li) => li.addEventListener('click', handleNav));
+menuItems.forEach((li) => li.addEventListener('click', handleNav));
 
 const handleCurrentYear = () => {
 	const year = new Date().getFullYear();
@@ -47,23 +48,28 @@ if (document.location.search === '?mail_status=error') {
 }
 
 const handleScrollSpy = () => {
-	let currentSectionIndex = 0;
+    if(document.body.classList.contains('main-page')) {
 
-	for (let i = 0; i < sections.length; i++) {
-		const sectionTop = sections[i].offsetTop - navHeight;
-		const sectionHeight = sections[i].offsetHeight;
-		const scrollPos = window.scrollY;
+        const sections = []
 
-		if (scrollPos >= sectionTop - sectionHeight / 3) {
-			currentSectionIndex = i;
-		}
-	}
+        scrollSpySections.forEach(section => {
+           
 
-	navLinks.forEach((link) => {
-		link.classList.remove('nav__link--active');
-	});
+            if(window.scrollY <= section.offsetTop + section.offsetHeight -80) {
+				sections.push(section)
+				
+				const activeSection = document.querySelector(`[href*="${sections[0].id}"]`)
+				
+				menuItems.forEach(item => item.classList.remove('nav__link--active'))
 
-	navLinks[currentSectionIndex].classList.add('nav__link--active');
-};
+				activeSection.classList.add('nav__link--active')
+			}
 
-window.addEventListener('scroll', handleScrollSpy);
+           
+
+        })
+    }
+}
+
+
+window.addEventListener('scroll', handleScrollSpy)
