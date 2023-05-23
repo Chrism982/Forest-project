@@ -5,9 +5,7 @@ const menuItems = document.querySelectorAll('.nav__link');
 const menuMobileItems = document.querySelectorAll('.nav__mobile-link');
 const scrollSpySections = document.querySelectorAll('.section1');
 
-
 const msgStatus = document.querySelector('.msg-status');
-
 
 const handleNav = () => {
 	navBtn.classList.toggle('is-active');
@@ -49,28 +47,23 @@ if (document.location.search === '?mail_status=error') {
 }
 
 const handleScrollSpy = () => {
-    if(document.body.classList.contains('main-page')) {
+	if (document.body.classList.contains('main-page')) {
+		const sections = [];
 
-        const sections = []
+		scrollSpySections.forEach((section) => {
+			if (window.scrollY <= section.offsetTop + section.offsetHeight - 80) {
+				sections.push(section);
 
-        scrollSpySections.forEach(section => {
-           
+				const activeSection = document.querySelector(
+					`[href*="${sections[0].id}"]`
+				);
 
-            if(window.scrollY <= section.offsetTop + section.offsetHeight -80) {
-				sections.push(section)
-				
-				const activeSection = document.querySelector(`[href*="${sections[0].id}"]`)
-				
-				menuItems.forEach(item => item.classList.remove('nav__link--active'))
+				menuItems.forEach((item) => item.classList.remove('nav__link--active'));
 
-				activeSection.classList.add('nav__link--active')
+				activeSection.classList.add('nav__link--active');
 			}
+		});
+	}
+};
 
-           
-
-        })
-    }
-}
-
-
-window.addEventListener('scroll', handleScrollSpy)
+window.addEventListener('scroll', handleScrollSpy);
