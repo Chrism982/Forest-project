@@ -2,25 +2,26 @@ const navMobile = document.querySelector('.nav-mobile');
 const navBtn = document.querySelector('.hamburger');
 const footerYear = document.querySelector('.footer__year');
 const menuItems = document.querySelectorAll('.nav__link');
+const menuMobileItems = document.querySelectorAll('.nav__mobile-link');
 const scrollSpySections = document.querySelectorAll('.section1');
 
 
 const msgStatus = document.querySelector('.msg-status');
 
 
-// const handleNav = () => {
-// 	navBtn.classList.toggle('is-active');
-// 	navMobile.classList.toggle('nav-mobile--active');
+const handleNav = () => {
+	navBtn.classList.toggle('is-active');
+	navMobile.classList.toggle('nav-mobile--active');
 
-// 	if (navMobile.classList.contains('nav-mobile--active')) {
-// 		document.body.style.overflowY = 'hidden';
-// 	} else {
-// 		document.body.style.overflowY = 'auto';
-// 	}
-// };
+	if (navMobile.classList.contains('nav-mobile--active')) {
+		document.body.style.overflowY = 'hidden';
+	} else {
+		document.body.style.overflowY = 'auto';
+	}
+};
 
 navBtn.addEventListener('click', handleNav);
-menuItems.forEach((li) => li.addEventListener('click', handleNav));
+menuMobileItems.forEach((li) => li.addEventListener('click', handleNav));
 
 const handleCurrentYear = () => {
 	const year = new Date().getFullYear();
